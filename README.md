@@ -19,15 +19,25 @@ Con un’unica interfaccia PWA installabile come icona su smartphone e desktop, 
 ## Requisiti funzionali
 
 | RF-01 | **Login**: l’utente accede tramite credenziali(JWT-based).
+
 | RF-02 | **Home**: due sezioni principali: “Ordini da evadere” e “Aggiorna giacenze”.
+
 | RF-03 | **Elenco ordini**: lista di ordini con stato “pending” (Nuovo/In prelievo), visualizzata con ID, data e numero di pezzi.
+
 | RF-04 | **Dettaglio ordine**: cliccando su un ordine, si mostra la lista di componenti da prelevare.
+
 | RF-05 | **Scanner QR**: la camera inquadra codici QR per validare i componenti; accetta solo codici presenti nell’ordine e segnala errori in caso contrario.
+
 | RF-06 | **Conferma prelievo**: ogni pezzo inquadrato si spunta nella lista; al completamento, si abilita il bottone “Conferma ordine preparato”.
+
 | RF-07 | **Aggiorna stock**: sezione per incrementare/decrementare quantità a magazzino sia in input diretto sia con stepper (+1/–1).
+
 | RF-08 | **Offline mode**: caching di ordini e movimenti con IndexedDB + Workbox Background Sync (Android).
+
 | RF-09 | **PWA installabile**: manifest e service worker per installazione su Home e avvio in modalità standalone.
+
 | RF-10 | **API REST**: backend FastAPI con endpoint CRUD per ordini, stock e login.
+
 | RF-11 | **Database**: PostgreSQL schema con tabelle `components`, `orders`, `order_lines`, `stocks`, `users`.
 
 ---
