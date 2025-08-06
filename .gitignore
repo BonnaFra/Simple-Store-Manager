@@ -1,0 +1,10 @@
+# Editor/IDE
+.vscode/
+.idea/
+.DS_Store
+
+# File temporanei
+*.tmp
+*.swp
+*.swo
+*.bak

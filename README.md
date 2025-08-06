@@ -30,7 +30,9 @@ Con un’unica interfaccia PWA installabile come icona su smartphone e desktop, 
 
 | RF-06 | **Conferma prelievo**: ogni pezzo inquadrato si spunta nella lista; al completamento, si abilita il bottone “Conferma ordine preparato”.
 
-| RF-07 | **Aggiorna stock**: sezione per incrementare/decrementare quantità a magazzino sia in input diretto sia con stepper (+1/–1).
+| RF-07a | **Aggiorna stock (manuale)**: sezione per incrementare/decrementare quantità a magazzino sia in input diretto sia con stepper (+1/–1).
+
+| RF-07b | **Registrazione consegne fornitori (opzionale)**: durante l’aggiornamento giacenze l’utente può inserire gli estremi della consegna—fornitore, data ordine, data arrivo, quantità ordinate/ricevute, presenza problemi, note; il sistema salva record in `deliveries`/`delivery_lines` e incrementa automaticamente lo stock.
 
 | RF-08 | **Offline mode**: caching di ordini e movimenti con IndexedDB + Workbox Background Sync (Android).
 
@@ -100,6 +102,7 @@ Con un’unica interfaccia PWA installabile come icona su smartphone e desktop, 
 3. Scansiona ogni codice QR per validare i componenti (messaggio di errore se non presenti)
 4. Conferma ordine preparato → lo stato diventa prepared e le giacenze vengono aggiornate
 5. Vai in “Aggiorna giacenze” per incrementare manualmente le quantità in ricezione
+6. In “Aggiorna giacenze” premi **“Nuova consegna”**, compila fornitore, date e quantità ricevute: l’app registra la consegna e aggiorna le scorte in automatico. Per correzioni rapide puoi sempre usare il metodo manuale (+/−) senza inserire una consegna.
 
 ---
 

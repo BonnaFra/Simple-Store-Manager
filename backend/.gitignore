@@ -1,0 +1,8 @@
+credentials.py
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Ambiente virtuale
+venv/
